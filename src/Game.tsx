@@ -65,13 +65,12 @@ import {
           if (isAWord) {
             setTries((t) =>{
                 const newTries = [...t, currentTry];
-                if (currentTry === word){
-                    if (isLast){
-                        gameDoneCallback(word, newTries);
-                    } else {
+                if (isLast){
+                    gameDoneCallback(word, newTries);
+                } else {
+                    if (currentTry === word){
                         setShowModal(true);
                     }
-                    
                 }
                 return newTries;
             } );    
