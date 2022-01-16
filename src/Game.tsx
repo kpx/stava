@@ -23,7 +23,6 @@ import {
   export function Game({n, idx, total, gameDoneCallback, hidden, isLast}: GameProps) {
     
     const word = words[(n % words.length)];
-    console.log({word});
 
     const [tries, setTries] = useState<string[]>([]);
     
